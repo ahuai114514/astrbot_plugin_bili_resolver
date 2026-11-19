@@ -14,11 +14,6 @@
     "type": "bool",
     "default": true
   },
-  "enable_card_title_search": {
-    "description": "卡片消息没有直链时，用卡片标题去 B 站搜索（QQ 官方机器人的 ark 卡片有时只给标题和摘要）",
-    "type": "bool",
-    "default": true
-  },
   "group_whitelist_mode": {
     "description": "群组白名单模式（开启后仅列表中的群生效，关闭则为黑名单模式——列表中的群不生效）",
     "type": "bool",
@@ -32,7 +27,11 @@
   "template_preset": {
     "description": "视频解析排版风格",
     "type": "string",
-    "options": ["原始格式", "简洁风格", "自定义"],
+    "options": [
+      "原始格式",
+      "简洁风格",
+      "自定义"
+    ],
     "default": "原始格式",
     "hint": "原始格式：插件内置纯文字格式（默认）\n简洁风格：带 Emoji 的卡片格式\n自定义：使用下方文本框中的模板\n各风格具体样式请查阅 README"
   },
@@ -41,5 +40,21 @@
     "type": "text",
     "default": "",
     "hint": "⚠️ 仅在上方排版风格选择「自定义」时生效，其他选项下此处内容不起作用。\n\n支持变量：\n${标题} ${UP主} ${UP主链接} ${简介} ${封面}\n${点赞} ${投币} ${收藏} ${转发} ${观看}\n${弹幕数量} ${评论} ${链接} ${发布时间}\n${类型} ${BV号} ${时长} ${版权}"
+  },
+  "enable_video": {
+    "description": "下载视频并合并转发",
+    "type": "bool",
+    "default": true
+  },
+  "max_video_mb": {
+    "description": "视频大小上限（MB）",
+    "type": "int",
+    "default": 100
+  },
+  "video_send_path": {
+    "description": "QQ 端视频目录",
+    "type": "string",
+    "default": "",
+    "hint": "填写 QQ 端对应的插件数据 videos 绝对路径；留空使用 AstrBot 文件服务。"
   }
 }

@@ -1,0 +1,7 @@
+# 更新日志
+
+## v1.0.7-ahuai.1 - 2026-11-19
+
+- 基于 chufeng/astrbot_plugin_bili_resolver 建立 fork，保留上游提交历史与作者信息。
+- 同步当前本地修改，插件版本为 1.0.7。
+- 将插件仓库地址关联到当前 fork，按上游 README 的 GPLv3 声明补充许可证全文。
